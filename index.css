@@ -1,0 +1,39 @@
+.root {
+    position: fixed;
+    inset: 0;
+    background: url(./asset/01.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.avatar {
+    width: 25%;
+    height: auto;
+    border-radius: 999px;
+}
+.font-box {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-word {
+    color: #fff;
+    font-size: 24px;
+}
+.menu-btns {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+}
+.btn {
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
