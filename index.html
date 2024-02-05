@@ -1,1 +1,55 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diy随机数生成器</title>
+    <style>
+    .box {
+      padding: 20px;
+      background-color: #2c2c32;
+      position: fixed;
+      inset: 0;
+    }
+    .btn {
+      color: #fff;
+      background-color: #0066b8;
+      padding: 8px 12px;
+      display: inline-block;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .result {
+      color: #fff;
+      margin-top: 8px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a class="btn">获取随机数</a>
+      <div class="result">结果是：</div>
+    </div>
+  </body>
+
+  <script>
+    let btn = document.querySelector('.btn')
+    let result = document.querySelector('.result')
+
+    btn.addEventListener('click', getRandom)
+
+    function getRandom () {
+      const resultList = []
+
+      while (resultList.length !== 10) {
+        const temp = Math.floor(Math.random() * 80) + 1
+        if (!resultList.includes(temp)) {
+          resultList.push(temp)
+        }
+      }
+      result.innerHTML = `结果是：${resultList.join(',')}`
+    }
+  </script>
+</html>
